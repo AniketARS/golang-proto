@@ -1,0 +1,28 @@
+syntax = "proto3";
+package ecommerce;
+
+option go_package = "/home/aniket/go-projs/product_info/ecommerce";
+
+service ProductInfo {
+    rpc addProduct(Product) returns (ProductID);
+    rpc getProduct(ProductID) returns (Product);
+    rpc allProduct(Empty) returns (Products);
+}
+
+message Empty {
+
+}
+
+message Product {
+    string id = 1;
+    string name = 2;
+    string description = 3;
+}
+
+message Products {
+    repeated Product products = 1;
+}
+
+message ProductID {
+    string value = 1;
+}
