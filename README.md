@@ -62,3 +62,11 @@ I used BloomRPC for testing the APIs.
 ![Get Products](./screenshots/getProduct.png)
 ![All Products](./screenshots/allProduct.png)
 
+### Docker Info
+
+If you want to use docker image directly
+```bash
+    docker pull aniketars/golang-proto
+    docker run -p 50051:50051 aniketars/golang-proto
+```
+
